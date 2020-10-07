@@ -1,10 +1,11 @@
 {
-  "name": "adonis-api-app",
-  "version": "4.1.0",
+  "name": "turistandopb_api",
+  "version": "1.0.0",
   "adonis-version": "4.1.0",
-  "description": "Adonisjs boilerplate for API server with pre-configured JWT",
+  "description": "Turistando application API made in Adonisjs",
   "main": "index.js",
   "scripts": {
+    "dev": "adonis serve --dev",
     "start": "ENV_SILENT=true node server.js",
     "test": "node ace test"
   },
@@ -12,8 +13,8 @@
     "adonisjs",
     "adonis-app"
   ],
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Apps4Society",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@adonisjs/ace": "^5.0.8",
@@ -24,11 +25,20 @@
     "@adonisjs/framework": "^5.0.9",
     "@adonisjs/ignitor": "^2.0.8",
     "@adonisjs/lucid": "^6.1.3",
-    "mysql": "^2.18.1",
-    "pg": "^8.3.3"
+    "pg": "^8.3.3",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {},
   "autoload": {
     "App": "./app"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a4s-ufpb/TuristandoPB-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a4s-ufpb/TuristandoPB-API/issues"
+  },
+  "homepage": "https://github.com/a4s-ufpb/TuristandoPB-API#readme"
 }
+
