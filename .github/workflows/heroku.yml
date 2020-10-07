@@ -17,8 +17,3 @@ jobs:
           heroku_app_name: "turistandopbapi-a4sufpb" #Must be unique in Heroku
           heroku_email: ${{secrets.HEROKU_LOGIN}}
           branch: "dev"
-        env:
-          NODE_ENV: production
-          APP_NAME: ${{secrets.APP_NAME}}
-          CACHE_VIEWS: ${{secrets.CACHE_VIEWS}}
-          HASH_DRIVER: ${{secrets.HASH_DRIVER}}
