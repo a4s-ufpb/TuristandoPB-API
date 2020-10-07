@@ -17,7 +17,7 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+  return { greeting: 'Welcome to TuristandoPB-API | Version: v1.0.0' }
 })
 
 Route.post('/users', 'UserController.create')
