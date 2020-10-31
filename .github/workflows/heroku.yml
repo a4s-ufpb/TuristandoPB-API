@@ -1,0 +1,19 @@
+name: Deploy in heroku
+
+on:
+  push:
+    branches: dev
+
+jobs:
+  # https://github.com/marketplace/actions/deploy-to-heroku
+  heroku-deploy:
+    runs-on: ubuntu-latest
+    name: Heroku deploy
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.5.6 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "turistandopbapi-a4sufpb" #Must be unique in Heroku
+          heroku_email: ${{secrets.HEROKU_LOGIN}}
+          branch: "dev"
