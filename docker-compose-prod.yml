@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+
+  turistandopb_api:
+    container_name: turistando_api
+    image: a4sufpb/turistandopb_api:1.0.0
+    restart: always
+    ports:
+      - "8089:8089"
+    networks:
+      - turistandopb_api-network
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+  db:
+    container_name: postgres-turistandopb_api
+    image: postgres:12.3
+    restart: always
+    networks:
+      - turistandopb_api-network
+    volumes:
+      - turistandopb_api:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+volumes:
+  turistandopb_api:
+
+networks:
+  turistandopb_api-network:
+    driver: bridge
