@@ -1,0 +1,16 @@
+.idea/
+.scannerwork/
+node_module/
+.editorconfig
+.env
+.env.example
+.gitignore
+.git/
+.github/
+package-lock.json
+Procfile
+sonar.txt
+README.md
+Dockerfile
+docker-compose.yml
+docker-compose-prod.yml
